@@ -1,0 +1,856 @@
+:root{
+    --red:#fc7978;
+    --black:#211717;
+    --blue:#5eb7b7;
+    --withe:#f3f9fb;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body{
+    background-color: #f3f9fb;
+    overflow-x: hidden;
+    font-family: 'Raleway', sans-serif; 
+}
+
+/**Ir Para Cima**/
+
+.go-top{
+    position: fixed;
+    bottom: 100px;
+    right: -100%;
+    width: 50px;
+    height: 50px;
+    border: 2px solid var(--red);
+    background: white;
+    z-index: 9999;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: 400ms;
+
+}
+
+.go-top:hover{
+    border: 2px solid var(--withe);
+    background: var(--red);
+
+}
+
+.go-top:hover span{
+    color: azure
+}
+
+.go-top span{
+    font-size: 35px;
+    color: var(--black);
+
+}
+
+/**Ir Para Cima**/
+
+/** Skew**/
+
+.skew-abaixo{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-width: 0 0 10vh 100vw;
+    border-style: solid;
+    border-color: transparent transparent white transparent;
+}
+
+.skew-acima{
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-width: 10vh 100vw 0 0;
+    border-style: solid;
+    border-color: white transparent transparent transparent;
+    z-index: 10;
+}
+
+/** Skew**/
+
+/** Menu De Navegação**/
+
+#header{
+    position: relative;
+    width: 100%;
+}
+
+.menu{
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 60px;
+    background-color:beige;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 9999;
+}
+
+.menu .logo-box{
+    margin-left: 20px;
+}
+
+.menu .logo-box h1 a{
+    text-decoration: none; /** Retira o sublinhado**/
+    font-size: 35px;
+    font-weight: 400;
+    color: var(--black);
+}
+
+.menu .list-container{
+    margin-right: 20px;
+}
+
+.menu .list-container .lists{
+    display: flex; /** Deita o Texto **/
+}
+
+.menu .list-container .lists li{
+    list-style: none;
+}
+
+.menu .list-container .lists li a{
+    text-decoration: none;
+    margin: 0px 10px;
+    padding: 8px;
+    color: var(--black);
+    border-radius: 24px;
+    font-size: 19px;
+    transition: 0.3s;
+}
+
+.menu .list-container .lists li a.active{
+    background-color: var(--red);
+    color: blanchedalmond;
+}
+
+.menu .list-container .lists li a:hover{
+    background-color: var(--red);
+    color: blanchedalmond;
+}
+
+.btn-menu > .fa-bars{
+    display: none;
+}
+
+/** Menu De Navegação**/
+
+
+/** IMG Header**/
+
+.img-header{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url(../img/header.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+
+}
+
+.img-header .welcome{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background: rgba(94, 102, 128, 0.6);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /**Adiciona uma coluna**/
+}
+
+.img-header .welcome h1{
+    font-size: 50px;
+    color: seashell;
+    font-weight: 200;
+}
+
+.img-header .welcome p{
+    font-size: 20px;
+    color: seashell;
+    margin-top: 10px;
+}
+
+.img-header .welcome > button{
+    width: 170px;
+    height: 40px;
+    background: var(--red);
+    border-radius: 24px;
+    border: none;
+    outline: none;
+    font-size: 22px;
+    color: seashell;
+    text-align: center;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+
+}
+
+.img-header .welcome > button:hover{
+    background: var(--blue);
+}
+
+.img-header .welcome hr{
+    width: 400px;
+    height: 2px;
+    background: seashell;
+    border: none;
+    margin-top: 5px;
+}
+
+/** IMG Header**/
+
+
+/** Sobre Mim**/
+
+.sobre-mim{
+    width: 100%;
+    margin-top: 100px;
+}
+
+.sobre-mim .info-container{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.sobre-mim .info-container h1{
+    font-size: 50px;
+    color:var(--black);
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.sobre-mim .info-container p{
+    font-size: 17px;
+    color: var(--black);
+    
+    text-align: justify;
+    line-height: 35px; /** Espaçamento de linhas**/
+    margin: 10px 0px;
+   
+}
+
+.sobre-mim .info-container .about-gallery{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 50px 0px;
+}
+
+.sobre-mim .info-container .about-gallery img{
+    width: calc(33.33% - 10px); /** Divide 100px por 3 imagens**/
+    height: 300px;
+    margin: 10px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    
+}
+
+.sobre-mim .info-container .about-more{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+}
+
+.sobre-mim .info-container .about-more button{
+    width: 120px;
+    height: 40px;
+    background: var(--red);
+    border-radius: 24px;
+    border: none;
+    outline: none;
+    font-size: 22px;
+    color: seashell;
+    text-align: center;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.sobre-mim .info-container .about-more button:hover{
+    background: var(--blue);
+}
+
+/** Sobre Mim**/
+
+
+/** Meus Projetos**/
+
+.my-projects{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url(../img/background.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    margin-top: 100px;
+
+}
+
+.my-projects .deg-background{
+    position: absolute; /** Para não se sobrepor**/
+    top:0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    
+}
+
+.my-projects .ejeZproject{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.my-projects .container-project{
+    width: 100%;
+    margin: auto;
+    padding-top: 100px;
+}
+
+.my-projects .container-project .project-title{
+    border: 2px solid #afff;
+    padding: 10px;
+    text-align: center;
+    width: 50%;
+    margin: auto;
+}
+
+.my-projects .container-project .project-title h2{
+    font-size: 40px;
+    color: seashell;
+    font-weight: normal;
+}
+
+.my-projects .container-project .project-title hr{
+    width: 50%;
+    background: white;
+    margin:10px auto;
+}
+
+.my-projects .container-project .project-img{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 80px;
+    padding-bottom: 100px;
+}
+
+
+
+.my-projects .container-project .project-img img{
+    width: calc(30% - 10px);
+    margin: 10px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+
+
+/** Meus Projetos**/
+
+
+/** Testemunhos **/
+
+.testemunhos{
+    width: 100%;
+    margin-top: 120px;
+
+}
+
+.testemunhos .testemunho-title{
+    width: 50%;
+    margin: auto;
+    text-align: center;
+}
+
+.testemunhos .testemunho-title h2{
+    font-size: 50px;
+    color: var(--black);
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+
+.testemunhos .testemunho-title hr{
+    width: 60%;
+    height: 2px;
+    margin: auto;
+    background: var(--black);
+    border: none;
+    
+}
+
+.testemunhos .box-testemunhos{
+    width: 90%;
+    margin: 80px auto;
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.testemunhos .box-testemunhos .card-testemunho{
+    width: 45%;
+    margin: 20px;
+}
+
+.testemunhos .box-testemunhos .card-testemunho .card-img{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.testemunhos .box-testemunhos .card-testemunho .card-img img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.testemunhos .box-testemunhos .card-testemunho .testemunho-text{
+    width: 100%;
+    border: 2px solid var(--red);
+    padding: 20px;
+    border-radius: 20px;
+    transition: 200ms;
+    margin-top: 10px;
+
+}
+
+.testemunhos .box-testemunhos .card-testemunho .testemunho-text h4{
+    color: var(--red);
+    font-size: 27px;
+    font-weight: normal;
+    text-align: center;
+    margin-bottom: 20px;
+    transition: 200ms;
+}
+
+.testemunhos .box-testemunhos .card-testemunho .testemunho-text p{
+    font-size: 19px;
+    color: var(--black);
+    text-align: center;
+    line-height: 35px;
+    transition: 200ms;
+
+}
+
+.testemunhos .box-testemunhos .card-testemunho .testemunho-text:hover{
+    border: 2px solid var(--blue);
+}
+
+.testemunhos .box-testemunhos .card-testemunho .testemunho-text:hover h4{
+    color: var(--blue);
+}
+
+/** Testemunhos **/
+
+
+/** Footer **/
+
+.footer{
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    background: url(../img/footer.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+}
+
+.footer .deg-footer{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.footer .ejeZfooter{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.footer .ejeZfooter .footer-content{
+    width: 90%;
+    padding: 100px;
+    margin: auto;
+}
+
+.footer .ejeZfooter .footer-content .footer-title{
+    width: 50%;
+    margin: auto;
+    border: 2px solid silver;
+    padding: 20px;
+}
+
+.footer .ejeZfooter .footer-content .footer-title h2{
+    font-size: 30px;
+    font-weight: normal;
+    color: var(--withe);
+    margin-bottom: 10px;
+    text-align: center;
+   
+}
+
+.footer .ejeZfooter .footer-content .footer-title hr{
+    width: 80%;
+    margin:20px auto;
+
+}
+
+.footer .ejeZfooter .footer-content .formulario-content{
+    width: 65%;
+    background: cornsilk;
+    border-radius: 20px;
+    border: 2px solid var(--red);
+    margin: 50px auto;
+    padding: 30px;
+}
+
+.title{
+    width: 50%;
+    margin: auto;
+    border: 2px solid tomato;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.title h2{
+    font-size: 30px;
+    font-weight: normal;
+    color: black;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.title hr{
+    width: 80%;
+    margin: 20px auto;
+}
+
+.title:hover{
+    background: cyan;
+}
+
+.formulario-content{
+    width: 50%;
+    
+    background: yellowgreen;
+    border-radius: 20px;
+    border: 2px solid yellow;
+    padding: 20px;
+    margin: 50px auto;
+    box-shadow: 0 0 20px;
+    
+}
+
+.formulario-content #formulario{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+   
+}
+
+.formulario-content #formulario label{
+    text-align: center;
+    color: var(--black);
+    font-size: 22px;
+    margin: 30px 0px 10px 0px ;
+}
+
+.formulario-content #formulario input{
+    width: 90%;
+    height: 40px;
+    margin: auto;
+    border: 2px solid var(--red);
+    border-radius: 24px;
+    outline: none;
+    text-align: center;
+    font-size: 15px;
+    color: var(--black);
+}
+
+.formulario-content #formulario textarea{
+    width: 90%;
+    height:150px ;
+    margin: auto;
+    border: 2px solid var(--red);
+    border-radius: 24px;
+    outline: none;
+    text-align: center;
+    font-size: 15px;
+    padding: 20px;
+    resize: none;
+    color: var(--black);
+}
+
+.formulario-content #formulario .send{
+    width: 100%;
+    display: flex;
+    margin: 30px auto;
+    justify-content: center;
+}
+
+.formulario-content #formulario .send button{
+    width: 140px;
+    height: 40px;
+    background: var(--red);
+    border-radius: 24px;
+    border: none;
+    outline: none;
+    font-size: 22px;
+    color: seashell;
+    text-align: center;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.formulario-content #formulario .send button:hover{
+    background: var(--blue);
+}
+
+.footer .ejeZfooter .footer-content .formulario-content #formulario{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.footer .ejeZfooter .footer-content .formulario-content #formulario label{
+    text-align: center;
+    color: var(--black);
+    font-size: 22px;
+    margin: 30px 0px 10px 0px;
+}
+
+.footer .ejeZfooter .footer-content .formulario-content #formulario input{
+    width: 90%;
+    height: 38px;
+    margin: auto;
+    border: 2px solid var(--red);
+    border-radius: 24px;
+    outline: none;
+    text-align: center;
+    font-size: 15px;
+    color: var(--black);
+}
+
+.footer .ejeZfooter .footer-content .formulario-content #formulario textarea{
+    width: 90%;
+    height:150px ;
+    margin: auto;
+    border: 2px solid var(--red);
+    border-radius: 24px;
+    outline: none;
+    text-align: center;
+    font-size: 15px;
+    padding: 20px;
+    resize: none;
+    color: var(--black);
+
+}
+
+.footer .ejeZfooter .footer-content .formulario-content #formulario .send{
+    width: 100%;
+    display: flex;
+    margin: 30px auto;
+    justify-content: center;
+}
+
+.footer .ejeZfooter .footer-content .formulario-content #formulario .send button{
+    width: 140px;
+    height: 40px;
+    background: var(--red);
+    border-radius: 24px;
+    border: none;
+    outline: none;
+    font-size: 22px;
+    color: seashell;
+    text-align: center;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.footer .ejeZfooter .footer-content .formulario-content #formulario .send button:hover{
+    background: var(--blue);
+}
+
+.footer .ejeZfooter .footer-content .footer-text{
+    width: 100%;
+    height: 60px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    border-top: 5px solid seashell;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--withe);
+
+    font-size: 20px;
+}
+
+/** Footer **/
+
+/** Media Query **/
+
+@media only screen and (max-width:900px ){
+    .btn-menu > .fa-bars{
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 30px;
+        font-size: 30px;
+        cursor: pointer;
+    }
+
+    .btn-menu > .fa-bars:hover{
+        color: var(--red);
+    }
+
+    .btn-menu > .fa-times{
+        color: var(--red);
+    }
+
+    .menu .list-container{
+        position: absolute;
+        top: 60px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 60px);
+        background: azure;
+    }
+
+    .menu .list-container .lists{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border-top: 5px solid var(--red);
+
+
+    }
+
+    .menu .list-container .lists li a{
+        font-size: 20px;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+    }
+    .menu .list-container .lists li{
+        width: 90%;
+        margin: 10px 0;
+        border-bottom: 1px solid var(--red);
+        text-align: center;
+
+    }
+
+    .menu .list-container .lists li a.active{
+        background: none;
+        color: var(--red);
+    }
+
+    .menu .list-container .lists li a:hover{
+        background: none;
+        color: var(--red);
+    }
+}
+
+/** Media Query **/
+
+
+@media only screen and (max-width: 773px){
+
+    /** IMG Header**/
+
+    .img-header .welcome h1{
+        font-size: 40px;
+    }
+
+    .img-header .welcome > button{
+        width: 130px;
+        font-size: 20px;
+
+    }
+
+    /**Sobre Mim**/
+
+    .sobre-mim .info-container .about-gallery{
+        flex-direction: column;
+    }
+
+    .sobre-mim .info-container .about-gallery img{
+        width: 100%;
+    }
+
+    /**Meus Projetos**/
+
+    .my-projects .container-project .project-img img{
+        width: 80%;
+        margin-bottom: 30px;
+    }
+
+
+
+}
+
+@media only screen and (max-width: 590px){
+
+    /**IMG Header**/
+
+    .img-header .welcome h1{
+        font-size: 30px;
+    }
+
+    .img-header .welcome hr{
+        width: 100%;
+    }
+
+    .img-header .welcome p{
+        font-size: 20px;
+    }
+
+    .img-header .welcome > button{
+        width: 100px;
+        font-size: 20px;
+    }
+}
+
+
